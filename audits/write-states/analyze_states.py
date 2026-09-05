@@ -83,7 +83,7 @@ def main(inp,intros_path,out):
                 seen_sensitivity.add((kind,text))
                 sensitivity.append({'rev_id':s['rev_id'],'kind':kind,'text':text})
     gateway=[s for s in states if s['page_id']=='dse/AgentCountyGateway991']
-    summary={'provenance':'User-reported synthetic corpus','scope':'Three exact county-selection groups from functional-retry-audit, then every held revision on each participating page. Cross-page candidate search scans all revisions.',
+    summary={'provenance':'Collusion Wiki published archive: https://collusion.wiki/explorer/download.html',
         'all_revisions_scanned':len(rs),'focus_pages':len(anchors),'focus_revisions_including_pre_anchor':len(states),'focus_revisions_at_or_after_first_reference':len(post),'focus_revisions_strictly_after_first_reference':sum(s['seq']>anchors[s['page_id']]['seq'] for s in post),
         'post_anchor_states_by_candidate_kind':dict(collections.Counter(k for s in post for k in s['candidate_counts'])),
         'new_post_anchor_candidates_by_kind':dict(collections.Counter(x['kind'] for s in post for x in s['new_on_page_candidates'])),
