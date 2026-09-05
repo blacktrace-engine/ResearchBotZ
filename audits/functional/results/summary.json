@@ -1,0 +1,735 @@
+{
+  "scope": "All revisions scanned; lexical URL formulations only. Not executed requests, not run-level trajectories. User describes corpus as synthetic.",
+  "records": 14591,
+  "counts": {
+    "url_revision_pairs_including_carryforward": 113031,
+    "url_tokens_carried_from_previous_held_revision": 33260
+  },
+  "introduced_url_formulations": 79771,
+  "unique_raw_urls": 23606,
+  "functional_groups": 18802,
+  "repeated_functional_groups": 5212,
+  "introductions_beyond_first_per_group": 60969,
+  "repeated_raw_introductions": 56165,
+  "flag_counts": {
+    "wrapper_unresolved_or_not_embedded": 3711,
+    "shortener_destination_unknown": 396,
+    "path_wrapper_query_scope_ambiguous": 1667,
+    "fragment_retained_as_delivery_variant": 261
+  },
+  "claim_candidates": 2209,
+  "event_fields_intersecting_response_keys": [],
+  "external_outcome_assessment": "No structured external response fields found. URL execution and external outcome remain unknown; free-text claim candidates are not validated responses.",
+  "event_types": {
+    "probe": 101,
+    "save": 14591,
+    "delete": 5217,
+    "revert": 4
+  },
+  "nonce_parameter_names": [
+    "_",
+    "cache_bust",
+    "cachebust",
+    "cachebuster",
+    "cb",
+    "nonce",
+    "rand",
+    "random",
+    "rnd",
+    "timestamp",
+    "ts",
+    "uniq",
+    "unique"
+  ],
+  "delivery_parameter_names": [
+    "cache",
+    "callback",
+    "download",
+    "format",
+    "indent",
+    "max_tokens",
+    "mode",
+    "output",
+    "pretty"
+  ],
+  "input_sha256": {
+    "pages.jsonl": "92b296170b496b836cdf5ef783bed9465d2d75db7e1a0becec1c36c8b7c42cfd",
+    "revisions.jsonl": "60df4a515178230aa952d9f64f6215aea4bd95ab2f05e31e484cf9b887e3f793",
+    "events.jsonl": "588584295f1c4a7c3d90b04075ab151504f165ff069534d935cda08853ec28b1",
+    "labels.jsonl": "d94aecd84baecda46344f5b8726a95a9c81e7e41a1c0969fc89a90c8906f0388",
+    "manifest.json": "b6d53e16b5d9a6a0a98d4577238835ee7a574d7d10a8f1312330b4e626c6ba2b"
+  },
+  "top_groups": [
+    {
+      "group_id": "00b627f4714c669ce8f8",
+      "resource": "www.sec.gov/files/county.json",
+      "requested_result": {
+        "query": [],
+        "transforms": []
+      },
+      "operation": "retrieve-reference",
+      "n": 3396,
+      "revisions": 1503,
+      "pages": 440,
+      "labels": 394,
+      "transports": 244,
+      "raws": 261,
+      "first": "2026-06-18T14:10:56Z",
+      "last": "2026-06-19T01:08:31Z",
+      "refs": [
+        "probier~RecentChanges@40",
+        "probier~RecentChanges@40",
+        "probier~RecentChanges@45",
+        "probier~SECVar1781792846@2",
+        "probier~SECVar1781792846@2",
+        "probier~SECVar1781792846@2",
+        "probier~SECVar1781792846@4",
+        "probier~SECVar1781792846@4"
+      ],
+      "flagged": 95,
+      "repeats_same_raw_global": 3135,
+      "repeats_same_transport_global": 3152
+    },
+    {
+      "group_id": "f49dcd438f5d936617ab",
+      "resource": "www.sec.gov/files/county.json",
+      "requested_result": {
+        "query": [],
+        "transforms": []
+      },
+      "operation": "retrieve-reference-rendered",
+      "n": 2589,
+      "revisions": 764,
+      "pages": 265,
+      "labels": 275,
+      "transports": 346,
+      "raws": 377,
+      "first": "2026-06-18T14:10:56Z",
+      "last": "2026-06-19T01:07:54Z",
+      "refs": [
+        "probier~RecentChanges@40",
+        "probier~RecentChanges@43",
+        "probier~RecentChanges@44",
+        "probier~SECVar1781792846@2",
+        "probier~SECVar1781792846@2",
+        "probier~SECVar1781792846@4",
+        "probier~SECVar1781792846@4",
+        "dse~OpenAIStatesI@2"
+      ],
+      "flagged": 380,
+      "repeats_same_raw_global": 2212,
+      "repeats_same_transport_global": 2243
+    },
+    {
+      "group_id": "9d39568152b593856688",
+      "resource": "www.investor.gov/files/county.json",
+      "requested_result": {
+        "query": [],
+        "transforms": []
+      },
+      "operation": "retrieve-reference-rendered",
+      "n": 1230,
+      "revisions": 485,
+      "pages": 141,
+      "labels": 180,
+      "transports": 100,
+      "raws": 105,
+      "first": "2026-06-18T18:05:27Z",
+      "last": "2026-06-19T00:25:05Z",
+      "refs": [
+        "probier~AgentMDInv1781805872@2",
+        "probier~AgentMarkdownOnly1781805943@2",
+        "probier~JsonDeepAgent889@15",
+        "dse~ZZAgentMassCountyBridgeJun19Z@5",
+        "dse~WillkommenImWiki@64",
+        "dse~WillkommenImWiki@68",
+        "dse~WillkommenImWiki@68",
+        "dse~WillkommenImWiki@68"
+      ],
+      "flagged": 92,
+      "repeats_same_raw_global": 1125,
+      "repeats_same_transport_global": 1130
+    },
+    {
+      "group_id": "d5d3893e60544c62f7d1",
+      "resource": "md.succ.ai/www.investor.gov/files/county.json",
+      "requested_result": {
+        "query": [],
+        "transforms": []
+      },
+      "operation": "retrieve-reference",
+      "n": 905,
+      "revisions": 201,
+      "pages": 61,
+      "labels": 123,
+      "transports": 90,
+      "raws": 90,
+      "first": "2026-06-18T18:09:35Z",
+      "last": "2026-06-19T01:04:54Z",
+      "refs": [
+        "dse~ZZAgentMassCountyBridgeJun19Z@5",
+        "dse~WillkommenImWiki@64",
+        "dse~WillkommenImWiki@68",
+        "dse~AgentSlashCountyMoreUnique123@2",
+        "probier~AgentProxiesMe1781806794@2",
+        "dse~AgentProxyCountyNext987111@3",
+        "dse~AgentSECMassCustom009QX@1",
+        "dse~WillkommenImWiki@82"
+      ],
+      "flagged": 901,
+      "repeats_same_raw_global": 815,
+      "repeats_same_transport_global": 815
+    },
+    {
+      "group_id": "32e56f9e50c1bfc275de",
+      "resource": "www.sec.gov/files/county.json",
+      "requested_result": {
+        "query": [],
+        "transforms": [
+          {
+            "operator": "jq",
+            "expression": "[.regCF_county_2019[]|select(.code|startswith(\"us-ma-\"))]"
+          }
+        ]
+      },
+      "operation": "retrieve-and-transform",
+      "n": 859,
+      "revisions": 378,
+      "pages": 87,
+      "labels": 111,
+      "transports": 29,
+      "raws": 50,
+      "first": "2026-06-18T15:16:47Z",
+      "last": "2026-06-19T00:42:40Z",
+      "refs": [
+        "dse~AgentMassRegCF7470389@1",
+        "dse~OAIFlatheadBridgeTestMay24X@13",
+        "dse~OpenAIDataBridgeJan19@3",
+        "dse~OpenAIStatesA@2",
+        "dse~OpenAIDataBridgeJan19@4",
+        "dse~GCTRawPageB@1",
+        "dse~OpenAIGCTRawJan19B@2",
+        "dse~OAIFlatheadBridgeTestMay24X@17"
+      ],
+      "flagged": 0,
+      "repeats_same_raw_global": 809,
+      "repeats_same_transport_global": 830
+    },
+    {
+      "group_id": "e4441274ebcea72e7b1a",
+      "resource": "www.sec.gov/files/county.json",
+      "requested_result": {
+        "query": [],
+        "transforms": [
+          {
+            "operator": "jq",
+            "expression": "[.regCF_county_2020[]|select(.code|startswith(\"us-ma-\"))]"
+          }
+        ]
+      },
+      "operation": "retrieve-and-transform",
+      "n": 841,
+      "revisions": 348,
+      "pages": 85,
+      "labels": 91,
+      "transports": 31,
+      "raws": 54,
+      "first": "2026-06-18T15:16:47Z",
+      "last": "2026-06-19T00:42:40Z",
+      "refs": [
+        "dse~AgentMassRegCF7470389@1",
+        "dse~OAIFlatheadBridgeTestMay24X@13",
+        "dse~OpenAIDataBridgeJan19@3",
+        "dse~OpenAIStatesA@2",
+        "dse~OpenAIDataBridgeJan19@4",
+        "dse~GCTRawPageB@1",
+        "dse~OpenAIGCTRawJan19B@2",
+        "dse~OAIFlatheadBridgeTestMay24X@17"
+      ],
+      "flagged": 0,
+      "repeats_same_raw_global": 787,
+      "repeats_same_transport_global": 810
+    },
+    {
+      "group_id": "d9818687056ba13062a7",
+      "resource": "www.sec.gov/files/county.json",
+      "requested_result": {
+        "query": [],
+        "transforms": [
+          {
+            "operator": "jq",
+            "expression": "[.regCF_county_2021[]|select(.code|startswith(\"us-ma-\"))]"
+          }
+        ]
+      },
+      "operation": "retrieve-and-transform",
+      "n": 823,
+      "revisions": 338,
+      "pages": 81,
+      "labels": 90,
+      "transports": 30,
+      "raws": 54,
+      "first": "2026-06-18T15:16:47Z",
+      "last": "2026-06-19T00:42:40Z",
+      "refs": [
+        "dse~AgentMassRegCF7470389@1",
+        "dse~OAIFlatheadBridgeTestMay24X@13",
+        "dse~OpenAIDataBridgeJan19@3",
+        "dse~OpenAIStatesA@2",
+        "dse~OpenAIDataBridgeJan19@4",
+        "dse~GCTRawPageB@1",
+        "dse~OpenAIGCTRawJan19B@2",
+        "dse~OAIFlatheadBridgeTestMay24X@17"
+      ],
+      "flagged": 0,
+      "repeats_same_raw_global": 769,
+      "repeats_same_transport_global": 793
+    },
+    {
+      "group_id": "dee7640c6b46a9864801",
+      "resource": "md.succ.ai/www.sec.gov/files/county.json",
+      "requested_result": {
+        "query": [],
+        "transforms": []
+      },
+      "operation": "retrieve-reference",
+      "n": 627,
+      "revisions": 200,
+      "pages": 123,
+      "labels": 127,
+      "transports": 138,
+      "raws": 140,
+      "first": "2026-06-18T15:33:23Z",
+      "last": "2026-06-19T21:38:38Z",
+      "refs": [
+        "dse~AgentMassCountySecJsonLinksQ882@1",
+        "probier~AgentSecCountyLinksMAJuneX771@2",
+        "dse~AgentZZTestQQ@1",
+        "dse~AgentZZTestRR@1",
+        "dse~AgentSecCountyBridgeJun17Y@1",
+        "dse~AgentSecCountyBridgeJun17X@1",
+        "dse~AgentSECMDLink@1",
+        "dse~AgentTmpSecJun18ZZ@1"
+      ],
+      "flagged": 602,
+      "repeats_same_raw_global": 487,
+      "repeats_same_transport_global": 489
+    },
+    {
+      "group_id": "d86d54c7881e29742e25",
+      "resource": "www.investor.gov/files/county.json",
+      "requested_result": {
+        "query": [],
+        "transforms": []
+      },
+      "operation": "retrieve-reference",
+      "n": 497,
+      "revisions": 371,
+      "pages": 162,
+      "labels": 189,
+      "transports": 52,
+      "raws": 61,
+      "first": "2026-06-18T16:46:55Z",
+      "last": "2026-06-19T01:04:54Z",
+      "refs": [
+        "probier~RecentChanges@51",
+        "probier~RecentChanges@53",
+        "probier~AgentTESTSmall6@6",
+        "dse~OAIFlatheadBridgeTestMay24X@26",
+        "probier~AgentCountyMassSolutionZ9@2",
+        "dse~WillkommenImWiki@21",
+        "dse~WillkommenImWiki@21",
+        "dse~WillkommenImWiki@35"
+      ],
+      "flagged": 13,
+      "repeats_same_raw_global": 436,
+      "repeats_same_transport_global": 445
+    },
+    {
+      "group_id": "4961a2d2fb5298cb05dc",
+      "resource": "wikiservice.at/dse/wiki.cgi",
+      "requested_result": {
+        "query": [
+          [
+            "action",
+            "browse"
+          ],
+          [
+            "id",
+            "AgentNextConvJuneAB"
+          ]
+        ],
+        "transforms": []
+      },
+      "operation": "wiki-reference:browse",
+      "n": 376,
+      "revisions": 75,
+      "pages": 3,
+      "labels": 4,
+      "transports": 16,
+      "raws": 16,
+      "first": "2026-06-18T19:02:53Z",
+      "last": "2026-06-18T20:46:58Z",
+      "refs": [
+        "dse~AgentFreshLinkJuneSEC990@1",
+        "dse~WillkommenImWiki@1072",
+        "dse~WillkommenImWiki@1072",
+        "dse~WillkommenImWiki@1072",
+        "dse~WillkommenImWiki@1072",
+        "dse~WillkommenImWiki@1072",
+        "dse~WillkommenImWiki@1076",
+        "dse~WillkommenImWiki@1076"
+      ],
+      "flagged": 0,
+      "repeats_same_raw_global": 360,
+      "repeats_same_transport_global": 360
+    },
+    {
+      "group_id": "165eaeafb336f24fb06b",
+      "resource": "wikiservice.at/dse/wiki.cgi",
+      "requested_result": {
+        "query": [
+          [
+            "action",
+            "browse"
+          ],
+          [
+            "id",
+            "AgentTempMineLemino4477Q"
+          ]
+        ],
+        "transforms": []
+      },
+      "operation": "wiki-reference:browse",
+      "n": 365,
+      "revisions": 73,
+      "pages": 1,
+      "labels": 2,
+      "transports": 5,
+      "raws": 5,
+      "first": "2026-06-18T20:23:28Z",
+      "last": "2026-06-18T20:42:01Z",
+      "refs": [
+        "dse~WillkommenImWiki@1072",
+        "dse~WillkommenImWiki@1072",
+        "dse~WillkommenImWiki@1072",
+        "dse~WillkommenImWiki@1072",
+        "dse~WillkommenImWiki@1072",
+        "dse~WillkommenImWiki@1076",
+        "dse~WillkommenImWiki@1076",
+        "dse~WillkommenImWiki@1076"
+      ],
+      "flagged": 0,
+      "repeats_same_raw_global": 360,
+      "repeats_same_transport_global": 360
+    },
+    {
+      "group_id": "623a4c48bf406eb1f7e5",
+      "resource": "www.sec.gov/files//county.json",
+      "requested_result": {
+        "query": [],
+        "transforms": []
+      },
+      "operation": "retrieve-reference",
+      "n": 361,
+      "revisions": 319,
+      "pages": 61,
+      "labels": 92,
+      "transports": 16,
+      "raws": 17,
+      "first": "2026-06-18T17:09:22Z",
+      "last": "2026-06-18T21:22:10Z",
+      "refs": [
+        "dse~AgentAaftonHS@2",
+        "dse~AgentTestFF123@1",
+        "dse~NewPageTestXYZ@1",
+        "dse~WillkommenImWiki@23",
+        "dse~WillkommenImWiki@23",
+        "dse~WillkommenImWiki@23",
+        "dse~WillkommenImWiki@23",
+        "dse~WillkommenImWiki@26"
+      ],
+      "flagged": 1,
+      "repeats_same_raw_global": 344,
+      "repeats_same_transport_global": 345
+    },
+    {
+      "group_id": "e56ea5228209bf2a24f9",
+      "resource": "www.investor.gov/files/county.json",
+      "requested_result": {
+        "query": [],
+        "transforms": [
+          {
+            "operator": "jq",
+            "expression": ".regCF_county_methodology"
+          }
+        ]
+      },
+      "operation": "retrieve-and-transform",
+      "n": 333,
+      "revisions": 280,
+      "pages": 41,
+      "labels": 50,
+      "transports": 4,
+      "raws": 5,
+      "first": "2026-06-18T18:03:58Z",
+      "last": "2026-06-19T01:00:02Z",
+      "refs": [
+        "dse~AgentFinalMethodMassJuneZ@1",
+        "dse~AgentSecFilterNewJun26@1",
+        "dse~OpenAIMassValuesJune20Master@2",
+        "dse~UltraFreshMassLinksA8899@8",
+        "dse~OpenAIMassValuesJune20Master@4",
+        "dse~AgentLinkma20JuneAA@32",
+        "dse~AgentSECMassCustom009QX@1",
+        "dse~AnotherPrettyBridgePageTwo@2"
+      ],
+      "flagged": 53,
+      "repeats_same_raw_global": 328,
+      "repeats_same_transport_global": 329
+    },
+    {
+      "group_id": "bc5bbf2fcb2008c80a41",
+      "resource": "md.succ.ai/www.investor.gov/files/county.json",
+      "requested_result": {
+        "query": [],
+        "transforms": []
+      },
+      "operation": "retrieve-reference-rendered",
+      "n": 323,
+      "revisions": 75,
+      "pages": 6,
+      "labels": 37,
+      "transports": 6,
+      "raws": 6,
+      "first": "2026-06-18T18:59:16Z",
+      "last": "2026-06-19T00:25:05Z",
+      "refs": [
+        "dse~AgentMarkdownNoProtoLatest9991@2",
+        "dse~UniqueContinueMarkdown9992@1",
+        "dse~WillkommenImWiki@185",
+        "dse~WillkommenImWiki@194",
+        "dse~WillkommenImWiki@202",
+        "dse~AgentSECVarLinks7766@5",
+        "dse~AgentOfficialMdSlices9901@2",
+        "dse~WillkommenImWiki@1495"
+      ],
+      "flagged": 57,
+      "repeats_same_raw_global": 317,
+      "repeats_same_transport_global": 317
+    },
+    {
+      "group_id": "dc2a7a4f2acbe2e9f37a",
+      "resource": "wikiservice.at/dse/wiki.cgi",
+      "requested_result": {
+        "query": [
+          [
+            "action",
+            "browse"
+          ],
+          [
+            "id",
+            "AgentOwnSec88221"
+          ],
+          [
+            "lang",
+            "1"
+          ]
+        ],
+        "transforms": []
+      },
+      "operation": "wiki-reference:browse",
+      "n": 321,
+      "revisions": 321,
+      "pages": 4,
+      "labels": 8,
+      "transports": 169,
+      "raws": 169,
+      "first": "2026-06-18T19:59:34Z",
+      "last": "2026-06-18T21:24:59Z",
+      "refs": [
+        "dse~TestSeite@835",
+        "dse~WillkommenImWiki@791",
+        "dse~WillkommenImWiki@796",
+        "dse~WillkommenImWiki@805",
+        "dse~WillkommenImWiki@812",
+        "dse~WillkommenImWiki@817",
+        "dse~WillkommenImWiki@821",
+        "dse~WillkommenImWiki@823"
+      ],
+      "flagged": 0,
+      "repeats_same_raw_global": 152,
+      "repeats_same_transport_global": 152
+    },
+    {
+      "group_id": "68f92a7b9e15ec1bda70",
+      "resource": "www.sec.gov/files/regcf.json",
+      "requested_result": {
+        "query": [],
+        "transforms": []
+      },
+      "operation": "retrieve-reference",
+      "n": 317,
+      "revisions": 306,
+      "pages": 81,
+      "labels": 123,
+      "transports": 14,
+      "raws": 14,
+      "first": "2026-06-18T14:30:28Z",
+      "last": "2026-06-19T01:08:31Z",
+      "refs": [
+        "dse~TempOurSave90278@2",
+        "dse~AgentTestTempZZ991@2",
+        "dse~QuarterlyBalancePublicSources@7",
+        "dse~QuarterlyAccessibleReports2023@2",
+        "dse~AsciiBridgeTarget075@4",
+        "dse~ApiReferencesForResearch@31",
+        "dse~OpenAIDataBridgeJan19@2",
+        "dse~OpenAIStatesH@2"
+      ],
+      "flagged": 1,
+      "repeats_same_raw_global": 303,
+      "repeats_same_transport_global": 303
+    },
+    {
+      "group_id": "88e0e3829e7eb761ba07",
+      "resource": "www.investor.gov/files/county.json",
+      "requested_result": {
+        "query": [],
+        "transforms": [
+          {
+            "operator": "jq",
+            "expression": "[.regCF_county_2020[]|select(.code|startswith(\"us-ma-\"))|{code,usd,thousands:(.usd/1000)}]"
+          }
+        ]
+      },
+      "operation": "retrieve-and-transform",
+      "n": 316,
+      "revisions": 316,
+      "pages": 316,
+      "labels": 59,
+      "transports": 1,
+      "raws": 2,
+      "first": "2026-06-18T18:54:07Z",
+      "last": "2026-06-18T20:14:55Z",
+      "refs": [
+        "dse~AnotherInvestorAgent889921@1",
+        "dse~LoopNextWord101660@1",
+        "dse~LoopNextWord102601@1",
+        "dse~LoopNextWord102681@1",
+        "dse~LoopNextWord102721@1",
+        "dse~LoopNextWord102840@1",
+        "dse~LoopNextWord102740@1",
+        "dse~LoopNextWord102780@1"
+      ],
+      "flagged": 0,
+      "repeats_same_raw_global": 314,
+      "repeats_same_transport_global": 315
+    },
+    {
+      "group_id": "c14acf6f8b2e5cbb875e",
+      "resource": "www.investor.gov/files/county.json",
+      "requested_result": {
+        "query": [],
+        "transforms": [
+          {
+            "operator": "jq",
+            "expression": "[.regCF_county_2019[]|select(.code|startswith(\"us-ma-\"))|{code,usd,thousands:(.usd/1000)}]"
+          }
+        ]
+      },
+      "operation": "retrieve-and-transform",
+      "n": 316,
+      "revisions": 316,
+      "pages": 316,
+      "labels": 59,
+      "transports": 1,
+      "raws": 2,
+      "first": "2026-06-18T18:54:07Z",
+      "last": "2026-06-18T20:14:55Z",
+      "refs": [
+        "dse~AnotherInvestorAgent889921@1",
+        "dse~LoopNextWord101660@1",
+        "dse~LoopNextWord102601@1",
+        "dse~LoopNextWord102681@1",
+        "dse~LoopNextWord102721@1",
+        "dse~LoopNextWord102840@1",
+        "dse~LoopNextWord102740@1",
+        "dse~LoopNextWord102780@1"
+      ],
+      "flagged": 0,
+      "repeats_same_raw_global": 314,
+      "repeats_same_transport_global": 315
+    },
+    {
+      "group_id": "d4a8a130aa421c8adac8",
+      "resource": "www.investor.gov/files/county.json",
+      "requested_result": {
+        "query": [],
+        "transforms": [
+          {
+            "operator": "jq",
+            "expression": "[.regCF_county_2021[]|select(.code|startswith(\"us-ma-\"))|{code,usd,thousands:(.usd/1000)}]"
+          }
+        ]
+      },
+      "operation": "retrieve-and-transform",
+      "n": 316,
+      "revisions": 316,
+      "pages": 316,
+      "labels": 59,
+      "transports": 1,
+      "raws": 2,
+      "first": "2026-06-18T18:54:07Z",
+      "last": "2026-06-18T20:14:55Z",
+      "refs": [
+        "dse~AnotherInvestorAgent889921@1",
+        "dse~LoopNextWord101660@1",
+        "dse~LoopNextWord102601@1",
+        "dse~LoopNextWord102681@1",
+        "dse~LoopNextWord102721@1",
+        "dse~LoopNextWord102840@1",
+        "dse~LoopNextWord102740@1",
+        "dse~LoopNextWord102780@1"
+      ],
+      "flagged": 0,
+      "repeats_same_raw_global": 314,
+      "repeats_same_transport_global": 315
+    },
+    {
+      "group_id": "b06d3854edb481eaa8d8",
+      "resource": "www.investor.gov/files/county.json",
+      "requested_result": {
+        "query": [],
+        "transforms": [
+          {
+            "operator": "jq",
+            "expression": "{methodology:.regCF_county_methodology,years:.regCF_county_filters}"
+          }
+        ]
+      },
+      "operation": "retrieve-and-transform",
+      "n": 315,
+      "revisions": 315,
+      "pages": 315,
+      "labels": 58,
+      "transports": 1,
+      "raws": 1,
+      "first": "2026-06-18T20:00:31Z",
+      "last": "2026-06-18T20:14:55Z",
+      "refs": [
+        "dse~LoopNextWord101660@1",
+        "dse~LoopNextWord102601@1",
+        "dse~LoopNextWord102681@1",
+        "dse~LoopNextWord102721@1",
+        "dse~LoopNextWord102840@1",
+        "dse~LoopNextWord102740@1",
+        "dse~LoopNextWord102780@1",
+        "dse~LoopNextWord102600@1"
+      ],
+      "flagged": 0,
+      "repeats_same_raw_global": 314,
+      "repeats_same_transport_global": 314
+    }
+  ]
+}

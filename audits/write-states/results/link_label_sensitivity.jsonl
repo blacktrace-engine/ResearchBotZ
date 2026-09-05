@@ -1,0 +1,1 @@
+{"kind": "table_candidate", "rev_id": "dse~AgentUltimateJuneBB@7", "text": "* [[URL]\"001\",\"003\",\"005\",\"007\",\"009\",\"011\",\"013\",\"015\",\"017\",\"019\",\"021\",\"023\",\"025\",\"027\"]as$i|[$i[]as$d|(\"us-ma-\"+$d)as$x|{id:$d,a:([.regCF_county_2019[]|select(.code==$x)|(.usd/10|round/100)]|first[URL] InvestorCombined]"}
