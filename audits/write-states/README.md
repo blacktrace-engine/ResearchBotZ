@@ -1,58 +1,79 @@
-# County retrieval: subsequent write states
+# County retrieval: four hours, more instructions, no answers
 
 ## Result
 
-The requested shift from proxy/query lists to written county data was not found in the held revisions examined.
+**94 pages. 3,350 follow-up revisions. No county results found.**
 
-Starting with the three exact 2019/2020/2021 Massachusetts county-selection groups from the functional audit, 94 distinct pages participate. Their export contains 3,828 held revisions, of which 3,444 are at or after that page's first reference to one of the selections: 94 anchor revisions and 3,350 later revisions. A page is the sequencing unit; it is not assumed to be one execution run or one author's work.
+This audit follows three exact Massachusetts county selections—2019, 2020 and 2021—from their first appearance through every available later revision on the participating pages.
 
-After masking request URLs and link labels, the detector found no county-marker candidates, parsed nonempty JSON objects/arrays, numeric table candidates, named comma-separated numeric rows or short-decimal candidates in those 3,444 states. This is a defined lexical/structural scan, not a proof that arbitrary encodings or other output formats contain no data. Request URL query expressions are deliberately not decoded into supposed results.
+| Scope                                                | Count |
+| ---------------------------------------------------- | ----: |
+| Participating pages                                  |    94 |
+| Total revisions on those pages                       | 3,828 |
+| First qualifying references                          |    94 |
+| Later revisions                                      | 3,350 |
+| States checked from the first reference onward       | 3,444 |
+| Result candidates after masking URLs and link labels | **0** |
 
-The follow-up sensitivity pass retains link labels and masks only URLs. It finds one distinct apparent table in `dse~AgentUltimateJuneBB@7`. Manual inspection shows it is an unencoded jq expression containing a county-code list and transformations such as `.usd/10|round/100`, still within a URL. It supplies no evaluated county values. See `results/link_label_sensitivity.jsonl`.
+The scan checks for county names and codes, nonempty JSON objects and arrays, numeric tables, named numeric rows and short decimals.
 
-The complete source export is user-reported synthetic. No incident attribution or runtime execution claim is made.
+A second pass keeps link labels visible. It finds one apparent table in `dse~AgentUltimateJuneBB@7`: a jq expression inside a URL, containing county codes and calculations such as `.usd/10|round/100`. Inspection confirms that it contains instructions, not evaluated county values. See [the sensitivity results](results/link_label_sensitivity.jsonl).
 
-## Gateway chronology
+Source: [Collusion Wiki’s published archive](https://collusion.wiki/explorer/download.html).
 
-`dse/AgentCountyGateway991` has 51 held revisions, from 2026-06-18 17:18:33 to 21:19:23 UTC, spanning 4 hours and 50 seconds. All 51 contain URL references. The earlier introduction rule counts 1,006 newly introduced references across these revisions, including reintroductions; this is not 1,006 executed fetches.
+## One page, four hours
 
-| Revision | UTC | Written state |
-|---|---|---|
-| @2 | 17:33:47 | Explicit county selections for 2019, 2020, 2021 through jq and AllOrigins |
-| @8 | 18:23:02 | Heading says “Third gateway Corsfix cached success”; body lists alternate routes and output limits |
-| @20 | 19:23:35 | Previously used selected query with fragment added |
-| @21 | 19:25:01 | Heading claims a robust scan; extraction expressions remain inside URLs |
-| @39 | 20:12:07 | Original selected query reintroduced |
-| @44 | 20:25:43 | Query parameter order changes; source and selection recur |
-| @45 | 20:32:31 | Expressions specify year, code, units and rounding, without evaluated values |
-| @50 | 21:07:54 | Expressions contain a literal code-to-county-name mapping and computed yearly fields, still as URL parameters |
-| @51 | 21:19:23 | Returns to alternate source URLs and parameters |
+`dse/AgentCountyGateway991` records **51 revisions in four hours and 50 seconds**, from 17:18:33 to 21:19:23 UTC on 18 June 2026.
 
-The code-to-name mapping in @50 is request-side scaffolding. Its presence does not establish that the USD fields have been populated. Across all 51 revisions, the examined nonlink text contains no evaluated county table or result object. `results/gateway_nonlink_text.txt` contains every masked write state for inspection.
+Every revision contains URLs. Together they introduce **1,006 references**, including reintroductions.
 
-## A data-bearing comparison exists
+| Revision | UTC      | What the page actually contains                                        |
+| -------- | -------- | ---------------------------------------------------------------------- |
+| @2       | 17:33:47 | County selections for 2019–2021 through jq and AllOrigins              |
+| @8       | 18:23:02 | “Corsfix cached success”: alternate routes and output limits           |
+| @20      | 19:23:35 | A previously used query with a fragment added                          |
+| @21      | 19:25:01 | A claimed “robust scan,” with extraction expressions still inside URLs |
+| @39      | 20:12:07 | The original selected query again                                      |
+| @44      | 20:25:43 | The same source and selection with reordered parameters                |
+| @45      | 20:32:31 | Expressions specifying years, codes, units and rounding                |
+| @50      | 21:07:54 | County-name mappings and yearly calculations inside URL parameters     |
+| @51      | 21:19:23 | More alternate source URLs and parameters                              |
 
-Elsewhere, `dse~Sector61AllStateValues2027@1` at 2026-06-16 20:01:20 UTC contains 52 named geographic rows with six numeric workforce values per row for 2015–2020: 312 numeric cells. Example:
+**The headings announce progress. The bodies supply more instructions.**
 
-```
+Even @50’s county-name mapping contains no evaluated county values. Across all 51 revisions, the inspected text outside links contains no county-result table or object.
+
+[Read every gateway revision with links masked.](results/gateway_nonlink_text.txt)
+
+## The export does contain answers to another task
+
+A separate workforce page, `dse~Sector61AllStateValues2027@1`, contains **52 geographic rows × six yearly values = 312 numeric cells**.
+
+For example:
+
+```text
 Massachusetts: 926818,944679,964116,976592,988022,987379
 ```
 
-That is written numeric content associated with named entities and years, unlike a URL asking a service to calculate those values. It is a separate task and is not evidence that the county retrieval succeeded. Its values are not independently authenticated. The full comparison body is retained in `results/numeric_data_comparison.json`.
+These are written values for 2015–2020. The county pages contain instructions for obtaining values.
 
-The all-corpus scan finds 55 distinct named numeric-row lines, including these 52. Finding them shows that the scan can detect this form of written data in this export. It does not establish detector completeness for every possible result format.
+Across the full corpus, the scan finds **55 distinct named numeric rows**, including these 52. Written numeric data survives in the export, and the detector recognises it.
 
-## Interpretation
+The [comparison file](results/numeric_data_comparison.json) preserves the full workforce entry. This is a separate task; its figures have not been independently verified.
 
-This extends the prior URL audit: the repeated county formulations are followed by further formulations without a detected pivot to stored county results on the participating pages. It supports stalled publication/retry-like behavior at the observable write-state level.
+## What the finding means
 
-It does not identify which URLs executed, whether a result was obtained but never posted, whether a successful answer was written to an unlinked page, or which route caused any unrecorded result. A later numeric object would be a stronger progress proxy, but could itself be copied or fabricated; first appearance and recurrence fields retain that distinction. In this county subset there are no detected new result candidates to attribute.
+**The county pages keep publishing ways to get the answer without publishing the answer itself.**
 
-The broader corpus contains multiple tasks and written numeric results. The county finding must not be generalized into “the entire corpus contains no progress.”
+This extends the functional audit beyond repeated URLs: it checks what was written next. The observed sequence is more retrieval instructions, more revisions, and no detected county-result output.
 
-## Reproduce
+The unit tracked is a page, which may contain contributions from multiple agents or runs. The audit examines published text; it does not reconstruct network execution or answers delivered elsewhere. Its detectors cover the documented formats, not every possible encoding.
 
-Python 3, standard library only. Use the unchanged expanded corpus and `results/introductions.jsonl` from `functional-retry-audit.zip`.
+The finding concerns these county selections. Other tasks in the archive contain written results.
+
+## Reproduce it
+
+Python 3.10+, standard library only. From this audit directory, use the expanded corpus and the functional audit’s `results/introductions.jsonl`:
 
 ```sh
 python test_states.py
@@ -60,20 +81,21 @@ python analyze_states.py /path/to/expanded-corpus \
   /path/to/functional-audit/results/introductions.jsonl ./rerun-results
 ```
 
-Six focused tests passed: detection of numeric county objects, tables and named rows; retention of source-linked data; exclusion of encoded query payloads; exclusion of long timestamp markers as short-decimal results.
+The six tests cover county objects, tables, named numeric rows, records containing source URLs, encoded request payloads and timestamp exclusions.
 
-Files:
+## Evidence files
 
-- `analyze_states.py`, `test_states.py`: reproducible implementation and checks.
-- `results/summary.json`: counts and exact input hashes.
-- `results/anchors.json`: first qualifying reference on each of the 94 pages.
-- `results/states.csv`: all participating-page states, including before the anchor.
-- `results/focus_states.jsonl`: nonlink text, counts, new candidate content, original revision IDs and timestamps.
-- `results/candidate_evidence.jsonl`: globally first candidate text plus participating-page occurrences; includes unrelated-task results and false positives for review.
-- `results/link_label_sensitivity.jsonl`: candidates from retaining link labels.
-- `results/gateway_nonlink_text.txt`: every gateway revision's masked body.
-- `results/numeric_data_comparison.json`: the numeric-data comparison source.
+| File                                                                   | Contents                                                                  |
+| ---------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| [`summary.json`](results/summary.json)                                 | Counts and input hashes                                                   |
+| [`anchors.json`](results/anchors.json)                                 | First qualifying reference on each page                                   |
+| [`states.csv`](results/states.csv)                                     | All participating-page revisions, including earlier states                |
+| [`focus_states.jsonl`](results/focus_states.jsonl)                     | Masked text, candidate counts, changes, revision IDs and timestamps       |
+| [`candidate_evidence.jsonl`](results/candidate_evidence.jsonl)         | Candidate text and occurrences, including other tasks and false positives |
+| [`link_label_sensitivity.jsonl`](results/link_label_sensitivity.jsonl) | Results from the pass retaining link labels                               |
+| [`gateway_nonlink_text.txt`](results/gateway_nonlink_text.txt)         | Every masked gateway revision                                             |
+| [`numeric_data_comparison.json`](results/numeric_data_comparison.json) | The workforce comparison entry                                            |
 
-Inputs were read only. No URLs or embedded code were executed. No external search was required to analyze the supplied synthetic records.
+Implementation: [`analyze_states.py`](analyze_states.py). Tests: [`test_states.py`](test_states.py).
 
-Confidence: high in counts and inspected gateway states; medium in generalizing the lexical absence finding to every conceivable county output format. Actual retrieval success remains unknown.
+Inputs were read only. No source URLs or embedded code were executed.
